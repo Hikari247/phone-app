@@ -135,6 +135,18 @@ footer> p {
   margin-left: 1em;
   margin-right: 1em;
 }
+
+.back{
+  text-align: left;
+}
+#btn99{
+  padding: 0.5em;
+  border-radius: 0.4em;
+  color: rgb(242, 242, 242);
+  font-size: 1.5em;
+  background: #0b0a0b;
+  cursor: pointer; /*カーソルをポインターの形（かたち）にする*/
+}
 /*******************************************************/
 /* レスポンシブ対応　メディアクエリを使ってCSSを切り替える */
 /* https://www.design-memo.com/coding/css-media-queries */
