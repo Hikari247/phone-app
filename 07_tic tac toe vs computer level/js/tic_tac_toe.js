@@ -374,10 +374,12 @@ function isReach(status){
         let ratCheckCnt = 0;
 
         line.forEach(function(square){
-            square.classList.contains("js-snake-checked");
-            counter = "bearCheckCnt";
-            square.classList.contains("js-rat-checked");
-            counter = "penCheckCnt";
+          if (square.classList.contains("js-snake-checked")){
+              snakeCheckCnt ++;
+          }
+           if(square.classList.contains("js-rat-checked")){
+               ratCheckCnt ++;
+           }
         });
 
         if (status === "snake" && snakeCheckCnt === 2 && ratCheckCnt === 0){
