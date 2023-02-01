@@ -324,12 +324,14 @@ function isReach(status){
         if(status === "rat" && snakeCheckCnt === 0 && ratCheckCnt === 2){
             snakeTurnEnd = "1";
         }
-        if(snakeTurnEnd = "1"){
+        if(snakeTurnEnd === "1"){
             line.some(function (square){
-                square.classList.contains("js-clickable");
-                isSelect(square);
-                return;
-            });
+                if(square.classList.contains("js-clickable")){
+                    isSelect(square);
+                    return true;
+                }  
+            })
+            return true;
         }
     });
 }
