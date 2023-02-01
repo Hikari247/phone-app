@@ -322,7 +322,7 @@ function snakeTurn(){
 
     while(snakeTurnEnd === "0"){
         if(level === "1" || level === "2" || level === "3"){
-        snakeTurnEnd = isReach("snake");
+        snakeTurnEnd = isReach("snakes");
         if(snakeTurnEnd === "1"){
             gameOverFlg = "1";
             break;
@@ -375,18 +375,18 @@ function isReach(status){
 
         line.forEach(function(square){
           if (square.classList.contains("js-snake-checked")){
-              snakeCheckCnt ++;
+              snakeCheckCnt++;
           }
            if(square.classList.contains("js-rat-checked")){
-               ratCheckCnt ++;
+               ratCheckCnt++;
            }
         });
 
-        if (status === "snake" && snakeCheckCnt === 2 && ratCheckCnt === 0){
+        if (status === "snakes" && snakeCheckCnt === 2 && ratCheckCnt === 0){
             snakeTurnEnd = "1";
         }
 
-        if(status === "rat" && snakeCheckCnt === 0 && ratCheckCnt === 2){
+        if(status === "rats" && snakeCheckCnt === 0 && ratCheckCnt === 2){
             snakeTurnEnd = "1";
         }
         if(snakeTurnEnd === "1"){
@@ -399,4 +399,5 @@ function isReach(status){
             return true;
         }
     });
+    return snakeTurnEnd;
 }
